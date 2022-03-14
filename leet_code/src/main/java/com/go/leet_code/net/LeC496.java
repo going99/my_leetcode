@@ -1,4 +1,4 @@
-package com.go.leet_code;
+package com.go.leet_code.net;
 
 /**
  * Description: (下一个更大元素)-简单

@@ -1,5 +1,6 @@
-package com.go.leet_code;
+package com.go.leet_code.net;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 /**
@@ -14,12 +15,12 @@ public class LeC739 {
     public static void main(String[] args) {
         int[] arr = new int[]{73,74,75,71,69,72,76,73};
         int[] sort = sort(arr);
-        System.out.println("sort = " + sort);
+        System.out.println("sort = " + Arrays.toString(sort));
     }
 
     private static int[] sort(int[] arr) {
         int[] res = new int[arr.length];
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         for (int i = 0; i < arr.length; i++) {
             while (!stack.isEmpty() && arr[stack.peek()] < arr[i]) {
                 res[stack.peek()] = i - stack.pop();
